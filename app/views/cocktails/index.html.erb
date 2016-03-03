@@ -1,0 +1,14 @@
+<div class="col-lg-12 text-center">
+<h1> List of all cocktails</h1>
+  <%= link_to "Add new cocktail", new_cocktail_path %>
+</div>
+
+<% @cocktails.each do |cocktail| %>
+
+<div class="col-lg-4 text-center">
+<h2><%= link_to cocktail.name, cocktail %></h2>
+</div>
+
+<% end %>
+
+
