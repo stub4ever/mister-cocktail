@@ -1,11 +1,20 @@
-<h1>Add a new ingredient to <%= @cocktail.name %></h1>
+  <div class="row">
+  <div class="col-lg-12 text-center">
 
-<%= link_to "Back to cocktail", cocktail_path(@cocktail) %>
+    <h1>Add a new ingredient to <%= @cocktail.name %></h1>
 
-<%= simple_form_for(@dose, url: cocktail_doses_path(@cocktail)) do |f| %>
-  <%#= f.error_notication %>
+    <%= link_to "Back to cocktail", cocktail_path(@cocktail) %>
+  </div>
+  </div>
 
-  <%= f.input :description %>
-  <%= f.input :ingredient_id, collection: @ingredients %>
-  <%= f.submit %>
-<% end %>
+  <div class="row">
+    <div class="col-md-4 col-lg-4 text-center">
+      <%= simple_form_for(@dose, url: cocktail_doses_path(@cocktail)) do |f| %>
+      <%#= f.error_notication %>
+
+      <%= f.input :description %>
+      <%= f.input :ingredient_id, collection: @ingredients %>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
